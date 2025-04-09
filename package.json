@@ -6,7 +6,7 @@
     "preview": "node dist/index.js",
     "build": "tsc",
     "dev": "tsx --watch src/index.ts",
-    "test": ""
+    "test": "vitest"
   },
   "keywords": [
     "dependency-injection",
@@ -24,7 +24,9 @@
   "devDependencies": {
     "@types/express": "^5.0.1",
     "@types/node": "^22.14.0",
+    "@vitest/coverage-v8": "3.1.1",
     "tsx": "^4.19.3",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
   }
 }
