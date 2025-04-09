@@ -1,12 +1,11 @@
-import express, { type Request, Response } from "express";
+import express from "express";
+import container from "./container";
+import { BookController } from "./controller/book.controller";
 
-const app = express();
 const port = 3000;
+const app = express();
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello, World");
-});
+const bookController: BookController = container.get(BookController);
+app.use("/books", bookController.routes());
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
+app.listen(port, () => console.log(`listening on port: ${port}`));

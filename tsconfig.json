@@ -3,14 +3,23 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "target": "es2022",
-    "moduleResolution": "bundler",
+    "target": "ES6",
+    "module": "NodeNext",
+    "lib": ["ES6", "DOM"],
 
-    "module": "ES2022",
+    "moduleResolution": "nodenext",
+    "resolveJsonModule": true,
+
+    "rootDir": "src",
     "outDir": "dist",
     "sourceMap": true,
 
     "strict": true,
-    "strictNullChecks": true
-  }
+    "strictNullChecks": true,
+
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }

@@ -1,11 +1,11 @@
 {
   "name": "di-repo",
   "version": "0.0.1",
-  "description": "",
-  "type": "module",
+  "main": "dist/index.js",
   "scripts": {
+    "preview": "node dist/index.js",
     "build": "tsc",
-    "dev": "tsx src/index.ts --watch",
+    "dev": "tsx --watch src/index.ts",
     "test": ""
   },
   "keywords": [
@@ -17,7 +17,9 @@
   "license": "ISC",
   "packageManager": "pnpm@10.8.0",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "inversify": "7.5.0",
+    "reflect-metadata": "^0.2.2"
   },
   "devDependencies": {
     "@types/express": "^5.0.1",
