@@ -1,8 +1,9 @@
 import express from "express";
 import container from "./container";
 import { BookController } from "./controller/book.controller";
+import { API_PORT } from "./env";
 
-const port = 3000;
+const port = API_PORT;
 const app = express();
 
 const bookController: BookController = container.get(BookController);
