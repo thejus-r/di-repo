@@ -10,6 +10,9 @@ coverage
 # env
 *.env
 
+# sqlite files
+*.db
+
 # lockfiles
 pnpm-lock.yaml
 npm-lock.yaml
