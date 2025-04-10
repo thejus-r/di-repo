@@ -6,13 +6,13 @@ import {
 } from "../model/book.model";
 import { IDatabaseConnector, SQLiteConnector } from "../database/sqlite";
 import { DatabaseSync } from "node:sqlite";
-import { debug } from "util";
 
 export interface IBookRepository {
   getBooks: () => Book[];
   insertBook: (data: BookInsertPayload) => Book | undefined;
   findBookById: (id: number) => Book | undefined;
   deleteBookById: (id: number) => boolean;
+  updateBookById: (id: number, data: BookInsertPayload) => Book | undefined;
 }
 
 @injectable()

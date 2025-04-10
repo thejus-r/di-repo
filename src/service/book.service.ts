@@ -1,5 +1,5 @@
 import { inject, injectable } from "inversify";
-import { BookRepository } from "../repository/book.repository";
+import { IBookRepository, BookRepository } from "../repository/book.repository";
 import {
   Book,
   BookInsertPayload,
@@ -22,7 +22,7 @@ export interface IBookService {
 export class BookService implements IBookService {
   constructor(
     @inject(BookRepository)
-    private readonly _bookRepository: BookRepository,
+    private readonly _bookRepository: IBookRepository,
   ) {}
 
   getAllBooks = (): Book[] => {
