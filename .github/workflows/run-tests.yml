@@ -22,5 +22,8 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
 
+      - name: Install Dependencies
+        run: pnpm install
+
       - name: Start Vitest
         run: pnpm run test
