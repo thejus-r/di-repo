@@ -6,8 +6,8 @@ import { type } from "arktype";
  */
 const book = type({
   id: "number",
-  "name?": "string < 16",
-  "author?": "string < 16",
+  "name?": "string < 80",
+  "author?": "string < 80",
 });
 
 /**

@@ -6,6 +6,8 @@ import { API_PORT } from "./env";
 const port = API_PORT;
 const app = express();
 
+app.use(express.json());
+
 const bookController: BookController = container.get(BookController);
 app.use("/books", bookController.routes());
 
